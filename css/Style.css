@@ -1,13 +1,14 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
+h2{
+    margin-left: 38%;
+    margin-right: 38%;
+}
 
 .container{
     background-color:beige;
 }
 
-.logoimg{
-    width: 40%;
-    height: 40%;
-}
+
 
