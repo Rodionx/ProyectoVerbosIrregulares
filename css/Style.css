@@ -15,10 +15,34 @@ h2{
 }
 
 .col{
-    border: solid;
-    border-color: red;
+    border:1px;
+    border-style: solid;
 }
 
+.primerboton{
+    margin-top: 2%;
+    margin-bottom: 7%;
+    margin-left: 47%;
+}
+
+.botones{
+    display: none;
+}
+
+.boton{
+    margin-top: 2%;
+    margin-bottom: 7%;
+    margin-left: 27%;
+}
+
+.fotos{
+    margin-top: 2%;
+}
+
+.foto{
+    width: 40%;
+    margin-left: 30%;
+}
 
 
 
