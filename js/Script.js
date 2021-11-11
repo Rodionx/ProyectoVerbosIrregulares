@@ -146,15 +146,52 @@ var verbos = [
     ["write","wrote","written","escribir"]
     ];
 
-const r = Math.floor(Math.random() * (139 - 0)) + 0;
+
+const r = null;
+const q = null;
 
 function empezar(){
     document.getElementById("botones1").style.display = "none";
     document.getElementById("botones2").style.display = "flex"
+    r = Math.floor(Math.random() * 139);
+     q = Math.floor(Math.random() * 3);
+    var columna = "col" +q;
+    document.getElementById("col0").innerHTML = verbos[r][0];
+    document.getElementById("col1").innerHTML = verbos[r][1];
+    document.getElementById("col2").innerHTML = verbos[r][2];
+    document.getElementById("col3").innerHTML = verbos[r][3];
+    document.getElementById(columna).innerHTML = "";
+    if(document.getElementById(columna).textContent == ""){
+        var input = document.createElement("input");
+        input.type = "text";
+        input.id = "casillaVerbo"
+        input.className = "casilla";
+        document.getElementById(columna).appendChild(input);
+    }
 };
 
 function siguiente(){
-    document.getElementById("col1").innerHTML = verbos[r][0]; 
+    //----------------------------------------------------------------------------------------------//
+
+    if(document.getElementById("casillaVerbo" == verbos[r][q])){
+        r = Math.floor(Math.random() * 139);
+        q = Math.floor(Math.random() * 3);
+        var columna = "col" +q;
+        document.getElementById("col0").innerHTML = verbos[r][0];
+        document.getElementById("col1").innerHTML = verbos[r][1];
+        document.getElementById("col2").innerHTML = verbos[r][2];
+        document.getElementById("col3").innerHTML = verbos[r][3];
+        document.getElementById(columna).innerHTML = "";
+        if(document.getElementById(columna).textContent == ""){
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "casillaVerbo"
+            input.className = "casilla";
+            document.getElementById(columna).appendChild(input);
+        }
+    }
+    
 };
+
 
 
