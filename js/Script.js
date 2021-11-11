@@ -147,15 +147,16 @@ var verbos = [
     ];
 
 
-const r = null;
-const q = null;
+var r = null;
+var q = null;
+var columna = null;
 
 function empezar(){
     document.getElementById("botones1").style.display = "none";
     document.getElementById("botones2").style.display = "flex"
     r = Math.floor(Math.random() * 139);
-     q = Math.floor(Math.random() * 3);
-    var columna = "col" +q;
+    q = Math.floor(Math.random() * 3);
+    columna = "col" +q;
     document.getElementById("col0").innerHTML = verbos[r][0];
     document.getElementById("col1").innerHTML = verbos[r][1];
     document.getElementById("col2").innerHTML = verbos[r][2];
@@ -173,10 +174,10 @@ function empezar(){
 function siguiente(){
     //----------------------------------------------------------------------------------------------//
 
-    if(document.getElementById("casillaVerbo" == verbos[r][q])){
+    if(document.getElementById("casillaVerbo").value  == verbos[r][q]){
         r = Math.floor(Math.random() * 139);
         q = Math.floor(Math.random() * 3);
-        var columna = "col" +q;
+        columna = "col" +q;
         document.getElementById("col0").innerHTML = verbos[r][0];
         document.getElementById("col1").innerHTML = verbos[r][1];
         document.getElementById("col2").innerHTML = verbos[r][2];
