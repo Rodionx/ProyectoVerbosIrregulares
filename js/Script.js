@@ -161,6 +161,7 @@ function empezar(){
     document.getElementById("col1").innerHTML = verbos[r][1];
     document.getElementById("col2").innerHTML = verbos[r][2];
     document.getElementById("col3").innerHTML = verbos[r][3];
+    document.getElementById("imgdinamica").src = "img/" + verbos[r][0] + ".jpg";
     document.getElementById(columna).innerHTML = "";
     if(document.getElementById(columna).textContent == ""){
         var input = document.createElement("input");
