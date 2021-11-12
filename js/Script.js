@@ -216,7 +216,10 @@ function estrellas(){
         document.getElementById("Star9").style.color = "gold";
         break;
         case 10:
-        document.getElementById("Star10").style.color = "gold";
+        for(i=1; i < 10; i++){
+            document.getElementById("Star" + i).style.color = "black";
+        }
+        document.getElementById("Award1").style.color = "black";
         break;
      }
 }
