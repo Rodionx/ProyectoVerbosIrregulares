@@ -10,8 +10,9 @@ h2{
     background-color:beige;
 }
 
-.espacio{
-    margin-bottom: 5%;
+.text-center{
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .col{
@@ -32,7 +33,7 @@ h2{
 .boton{
     margin-top: 2%;
     margin-bottom: 7%;
-    margin-left: 27%;
+    margin-left: 29%;
 }
 
 .fotos{
@@ -46,6 +47,7 @@ h2{
 
 .casilla{
     background-color: beige;
+    width: 100%;
 }
 
 

@@ -151,9 +151,7 @@ var r = null;
 var q = null;
 var columna = null;
 
-function empezar(){
-    document.getElementById("botones1").style.display = "none";
-    document.getElementById("botones2").style.display = "flex"
+function jugar(){
     r = Math.floor(Math.random() * 139);
     q = Math.floor(Math.random() * 3);
     columna = "col" +q;
@@ -172,26 +170,15 @@ function empezar(){
     }
 };
 
-function siguiente(){
-    //----------------------------------------------------------------------------------------------//
+function empezar(){
+    document.getElementById("botones1").style.display = "none";
+    document.getElementById("botones2").style.display = "flex"
+    jugar();
+};
 
+function siguiente(){
     if(document.getElementById("casillaVerbo").value  == verbos[r][q]){
-        r = Math.floor(Math.random() * 139);
-        q = Math.floor(Math.random() * 3);
-        columna = "col" +q;
-        document.getElementById("col0").innerHTML = verbos[r][0];
-        document.getElementById("col1").innerHTML = verbos[r][1];
-        document.getElementById("col2").innerHTML = verbos[r][2];
-        document.getElementById("col3").innerHTML = verbos[r][3];
-        document.getElementById("imgdinamica").src = "img/" + verbos[r][0] + ".jpg";
-        document.getElementById(columna).innerHTML = "";
-        if(document.getElementById(columna).textContent == ""){
-            var input = document.createElement("input");
-            input.type = "text";
-            input.id = "casillaVerbo"
-            input.className = "casilla";
-            document.getElementById(columna).appendChild(input);
-        }
+        jugar();
     }
     
 };
