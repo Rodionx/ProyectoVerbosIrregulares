@@ -20,24 +20,18 @@ h2{
     border-style: solid;
 }
 
-.primerboton{
-    margin-top: 2%;
-    margin-bottom: 7%;
-    margin-left: 47%;
-}
-
 .botones{
     display: none;
 }
 
-.boton{
-    margin-top: 2%;
-    margin-bottom: 7%;
-    margin-left: 29%;
-}
-
 .fotos{
     margin-top: 2%;
+    display: none;
+}
+
+.niveles{
+    margin-top: 2%;
+    text-align: center;
 }
 
 .foto{

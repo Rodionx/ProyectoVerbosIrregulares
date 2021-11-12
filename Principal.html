@@ -22,9 +22,6 @@
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="verbs-tab" data-bs-toggle="tab" data-bs-target="#verbs" type="button" role="tab" aria-controls="verbs" aria-selected="false">Verbs</button>
           </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">...</button>
-          </li>
         </ul>
       <div class="tab-content" id="MyTabeContent">
         <div class="tab-pane fade show active" id="play" role="tabpanel" aria-labelledby="play-tab">
@@ -45,7 +42,7 @@
             <span class="fa fa-award fa-2x" id="Award2" style="color: beige;"></span>
             <span class="fa fa-award fa-2x" id="Award3" style="color: beige;"></span>
           </div>
-          <div class="row" style="background-color: black ; color: white ; font-weight:bold;" >
+          <div class="row" id="tablaJuego" style="background-color: black ; color: white ; font-weight:bold;" >
             <div class="col">
               Infinitive
             </div>
@@ -59,7 +56,7 @@
               Spanish
             </div>
           </div>
-          <div class="row">
+          <div class="row" id="tablaJuego1">
             <div class="col" id="col0">
               ...
             </div>
@@ -73,15 +70,22 @@
               ...
             </div>
           </div>
-          <div class="fotos">
-            <img src="img/comienzo.jfif" id="imgdinamica" alt="foto" class="foto">
+          <div class="niveles" id="niveles">
+            <h4>Selecciona el nivel!!</h4>
+            <button type="button" class="btn btn-primary" id="bl" onclick="level1()">1</button>
+            <button type="button" class="btn btn-primary" id="b2" onclick="level2()">2</button>
+            <button type="button" class="btn btn-primary" id="b3" onclick="level3()">3</button>
+            <button type="button" class="btn btn-primary" id="b4" onclick="level4()">4</button>
+            <button type="button" class="btn btn-primary" id="b5" onclick="level5()">5</button>
           </div>
-          <div id="botones1">
-            <input type="button" class="primerboton" onclick="empezar()" value="Empezar!">
+          <div class="fotos" id="fotos">
+            <img src="img/comienzo.jfif" id="imgdinamica" alt="foto" class="foto">
+            <div class="botones" id="botones2">
+              <button type="button" class="btn btn-dark" onclick="siguiente()" style="margin-left: 29%; margin-top: 2%;">Siguiente!</button>
+            </div>
           </div>
           <div class="botones" id="botones2">
-            <input type="button" class="boton" onclick="atras()" value="Volver">
-            <input type="button" class="boton" onclick="siguiente()" value="Siguiente!">
+            <button type="button" class="btn btn-dark" onclick="siguiente()" style="margin-left: 29%; margin-top: 2%;">Siguiente!</button>
           </div>
         </div>
           <div class="tab-pane fade" id="verbs" role="tabpanel" aria-labelledby="verbs-tab">
@@ -673,7 +677,6 @@
               </tbody>
             </table>
           </div>
-          <div class="tab-pane fade" id="nada" role="tabpanel" aria-labelledby="nada-tab">...</div>
         </div>
       </div> 
         <script src="js/bootstrap.min.js"></script>

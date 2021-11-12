@@ -152,6 +152,9 @@ var q = null;
 var columna = null;
 var contador = 0;
 var supercontador = 0;
+var level = 0;
+var puntuacion = 0;
+var comparacion = level;
 
 function jugar(){
     r = Math.floor(Math.random() * 139);
@@ -173,22 +176,67 @@ function jugar(){
 }
 
 function empezar(){
-    document.getElementById("botones1").style.display = "none";
+    document.getElementById("niveles").style.display = "none";
     document.getElementById("botones2").style.display = "flex"
+    document.getElementById("fotos").style.display = "flex";
     jugar();
+}
+
+function terminar(){
+    if(level == 0){
+        document.getElementById("imgdinamica").src = "img/winer.jpg";
+        document.getElementById("botones2").style.display = "none";
+        document.getElementById("tablaJuego").style.display = "none";
+        document.getElementById("tablaJuego1").style.display = "none";
+        alert("Tu puntuacion es " + puntuacion + "/" + comparacion);
+    };
 }
 
 function siguiente(){
     if(document.getElementById("casillaVerbo").value  == verbos[r][q]){
         jugar();
         contador++;
+        puntuacion++;
         estrellas();
+        level--;
+        terminar();
     }else{
         for(i = 1 ; i < 10; i++){
             document.getElementById("Star" + i).style.color = "black";
         }
+        document.getElementById("casillaVerbo").style.backgroundColor = "red";
+        setTimeout(function(){document.getElementById("casillaVerbo").style.backgroundColor = "beige";},3000);
+        setTimeout("jugar()", 3000);
+        level--;
+        terminar();
     }
     
+}
+
+function level1(){
+    level = 10;
+    comparacion = level;
+    empezar();
+}
+function level2(){
+    level = 15;
+    comparacion = level;
+    empezar();
+}
+function level3(){
+    level = 20;
+    comparacion = level;
+    empezar();
+}
+function level4(){
+    level = 25;
+    comparacion = level;
+    empezar();
+}
+function level5(){
+    level = 30;
+    comparacion = level;
+    empezar(); 
 }
 
 function estrellas(){
