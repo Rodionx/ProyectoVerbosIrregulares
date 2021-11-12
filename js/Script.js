@@ -151,6 +151,7 @@ var r = null;
 var q = null;
 var columna = null;
 var contador = 0;
+var supercontador = 0;
 
 function jugar(){
     r = Math.floor(Math.random() * 139);
@@ -189,37 +190,49 @@ function siguiente(){
 function estrellas(){
      switch(contador){
         case 1:
-        document.getElementById("Star1").style.color = "gold";
+            document.getElementById("Star1").style.color = "gold";
         break;
         case 2:
-        document.getElementById("Star2").style.color = "gold";
+            document.getElementById("Star2").style.color = "gold";
         break;
         case 3:
-        document.getElementById("Star3").style.color = "gold";
+            document.getElementById("Star3").style.color = "gold";
         break;
         case 4:
-        document.getElementById("Star4").style.color = "gold";
+            document.getElementById("Star4").style.color = "gold";
         break;
         case 5:
-        document.getElementById("Star5").style.color = "gold";
+            document.getElementById("Star5").style.color = "gold";
         break;
         case 6:
-        document.getElementById("Star6").style.color = "gold";
+            document.getElementById("Star6").style.color = "gold";
         break;
         case 7:
-        document.getElementById("Star7").style.color = "gold";
+            document.getElementById("Star7").style.color = "gold";
         break;
         case 8:
-        document.getElementById("Star8").style.color = "gold";
+            document.getElementById("Star8").style.color = "gold";
         break;
         case 9:
-        document.getElementById("Star9").style.color = "gold";
+            document.getElementById("Star9").style.color = "gold";
         break;
         case 10:
-        for(i=1; i < 10; i++){
-            document.getElementById("Star" + i).style.color = "black";
-        }
-        document.getElementById("Award1").style.color = "black";
+            for(i=1; i < 10; i++){
+                document.getElementById("Star" + i).style.color = "black";
+            }
+            contador = 0;
+            supercontador++;
+            switch(supercontador){
+                case 1:
+                    document.getElementById("Award1").style.color = "#cd7f32";
+                break;
+                case 2:
+                    document.getElementById("Award2").style.color = "silver";
+                break;
+                case 3:
+                    document.getElementById("Award3").style.color = "gold";
+                break;
+            }
         break;
      }
 }
