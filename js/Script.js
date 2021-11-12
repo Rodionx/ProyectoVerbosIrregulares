@@ -150,6 +150,7 @@ var verbos = [
 var r = null;
 var q = null;
 var columna = null;
+var contador = 0;
 
 function jugar(){
     r = Math.floor(Math.random() * 139);
@@ -168,20 +169,59 @@ function jugar(){
         input.className = "casilla";
         document.getElementById(columna).appendChild(input);
     }
-};
+}
 
 function empezar(){
     document.getElementById("botones1").style.display = "none";
     document.getElementById("botones2").style.display = "flex"
     jugar();
-};
+}
 
 function siguiente(){
     if(document.getElementById("casillaVerbo").value  == verbos[r][q]){
         jugar();
+        contador++;
+        estrellas();
     }
     
-};
+}
+
+function estrellas(){
+     switch(contador){
+        case 1:
+        document.getElementById("Star1").style.color = "gold";
+        break;
+        case 2:
+        document.getElementById("Star2").style.color = "gold";
+        break;
+        case 3:
+        document.getElementById("Star3").style.color = "gold";
+        break;
+        case 4:
+        document.getElementById("Star4").style.color = "gold";
+        break;
+        case 5:
+        document.getElementById("Star5").style.color = "gold";
+        break;
+        case 6:
+        document.getElementById("Star6").style.color = "gold";
+        break;
+        case 7:
+        document.getElementById("Star7").style.color = "gold";
+        break;
+        case 8:
+        document.getElementById("Star8").style.color = "gold";
+        break;
+        case 9:
+        document.getElementById("Star9").style.color = "gold";
+        break;
+        case 10:
+        document.getElementById("Star10").style.color = "gold";
+        break;
+     }
+}
+
+
 
 
 
