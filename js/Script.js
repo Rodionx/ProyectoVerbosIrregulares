@@ -183,6 +183,10 @@ function siguiente(){
         jugar();
         contador++;
         estrellas();
+    }else{
+        for(i = 1 ; i < 10; i++){
+            document.getElementById("Star" + i).style.color = "black";
+        }
     }
     
 }
